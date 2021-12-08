@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<title>Baraja-Cartas</title>
+<style>
+body{
+	background-color: darkred;
+}
+
+.carta{
+	height: 300px;
+	width: 200px;
+	background: white;
+	border-radius: 5px;
+	border: solid;
+	border-color: black;
+}
+.numero{
+	font-size: 25px;
+}
+
+.simbolo
+{
+	font-size: 25px;
+}
+
+.palo
+{
+	font-size: 60px;
+}
+/*cinco corazones*/
+#cinco_corazones
+{
+	transform: rotate(45deg);
+	position: absolute;
+	top: 180px;
+	left: 400px;
+	color: red;
+	z-index: 5;
+}
+#numeracion5corazones_invertido
+{
+	transform:  rotate(180deg);
+	position:  absolute;
+	bottom:  0px;
+	right:  0px;
+}
+#cinco_corazones>#palo1
+{
+	position:  absolute;
+	top: 25px;
+	left:  40px;
+}
+#cinco_corazones>#palo2
+{
+	position:  absolute;
+	top: 25px;
+	left:  130px;
+}
+#cinco_corazones>#palo3
+{
+	position:  absolute;
+	top:  120px;
+	left:  85px;
+}
+#cinco_corazones>#palo4
+{
+	transform: rotate(180deg);
+	position:  absolute;
+	bottom:  25px;
+	left:  40px;
+}
+#cinco_corazones>#palo5
+{
+	transform: rotate(180deg);
+	position:  absolute;
+	bottom:  25px;
+	left:  130px;
+}
+
+/*dos treboles*/
+#dos_treboles
+{
+	transform: rotate(145deg);
+	position: absolute;
+	left:  160px;
+	top:  150px;
+	z-index: 1;
+}
+#numeracion2treboles_invertidos
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#dos_treboles>#palo1
+{
+	position: absolute;
+	top: 25px;
+	left: 85px;
+}
+#dos_treboles>#palo2
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 25px;
+	left: 85px;
+}
+/*cuatro treboles*/
+#cuatro_treboles
+{
+	transform: rotate(0deg);
+	position: absolute;
+	left: 280px;
+	top: 120px;
+	z-index: 3;
+}
+#numeracion4treboles_invertidos
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+#cuatro_treboles>#palo1
+{
+	position: absolute;
+	top: 25px;
+	left: 130px;
+}
+#cuatro_treboles>#palo2
+{
+	position: absolute;
+	top: 25px;
+	right: 130px;
+}
+#cuatro_treboles>#palo3
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 25px;
+	left: 130px;
+}
+#cuatro_treboles>#palo4
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 25px;
+	right: 130px;
+}
+/*tres picas*/
+#tres_picas
+{
+	transform: rotate(160deg);
+	position: absolute;
+	left: 210px;
+	top: 120px;
+	z-index: 2;
+}
+#numeracion3picas_invertidos
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#tres_picas>#palo1
+{
+	position: absolute;
+	top: 25px;
+	left: 85px;
+}
+#tres_picas>#palo2
+{
+	transform: rotate(180deg);
+	position: absolute;
+	top: 125px;
+	left: 85px;
+}
+#tres_picas>#palo3
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 25px;
+	left: 85px;
+}
+/*siete treboles*/
+#siete_treboles
+{
+	transform: rotate(30deg);
+	position: absolute;
+	left: 350px;
+	top: 140px;
+	z-index: 4;
+}
+#numeracion7treboles_invertidos
+{
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#siete_treboles>#palo1
+{
+	position: absolute;
+	top: 25px;
+	left: 40px;
+}
+#siete_treboles>#palo2
+{
+	position: absolute;
+	top: 25px;
+	right: 40px;
+}
+#siete_treboles>#palo3
+{
+	position: absolute;
+	top: 80px;
+	left:85px;
+}
+#siete_treboles>#palo4
+{
+	position:absolute;
+	bottom: 110px;
+	left: 40px;
+}
+#siete_treboles>#palo5
+{
+	position:absolute;
+	bottom: 110px;
+	right: 40px;
+}
+#siete_treboles>#palo6
+{
+	transform: rotate(180deg);
+	position:absolute;
+	bottom: 25px;
+	left: 40px;
+}
+#siete_treboles>#palo7
+{
+	transform: rotate(180deg);
+	position:absolute;
+	bottom: 25px;
+	right: 40px;
+}
+</style>
+	</head>
+	<body>
+		<div id="cinco_corazones" class="carta">
+			<div id="numeracion5corazones" class="numeracion">
+				<div class="numero">5</div>
+				<div class="simbolo">&#9829</div>
+			</div>
+			<div id="numeracion5corazones_invertido" class="numeracion">
+				<div class="numero">5</div>
+				<div class="simbolo">&#9829</div>
+
+			</div>
+			<div class="palo" id="palo1">&#9829</div>
+			<div class="palo" id="palo2">&#9829</div>
+			<div class="palo" id="palo3">&#9829</div>
+			<div class="palo" id="palo4">&#9829</div>
+			<div class="palo" id="palo5">&#9829</div>
+		</div>
+		
+
+
+		<div id="dos_treboles" class="carta">
+			<div id="numeracion2treboles" class="numeracion">
+				<div class="numero">2</div>
+				<div class="simbolo">&#9827</div>
+			</div>
+			<div id="numeracion2treboles_invertidos" class="numeracion">
+				<div class="numero">2</div>
+				<div class="simbolo">&#9827</div>
+			</div>
+			<div class="palo" id="palo1">&#9827</div>
+			<div class="palo" id="palo2">&#9827</div>
+		</div>
+
+
+		<div id="cuatro_treboles" class="carta">
+			<div id="numeracion4treboles" class="numeracion">
+				<div class="numero">4</div>
+				<div class="simbolo">&#9827</div>
+			</div>
+			<div id="numeracion4treboles_invertidos" class="numeracion">
+				<div class="numero">4</div>
+				<div class="simbolo">&#9827</div>
+			</div>
+			<div class="palo" id="palo1">&#9827</div>
+			<div class="palo" id="palo2">&#9827</div>
+			<div class="palo" id="palo3">&#9827</div>
+			<div class="palo" id="palo4">&#9827</div>
+		</div>
+
+		<div id="tres_picas" class="carta">
+			<div id="numeracion3picas" class="numeracion">
+				<div class="numero">3</div>
+				<div class="simbolo">&#9824</div>
+			</div>
+			<div id="numeracion3picas_invertidos" class="numeracion">
+				<div class="numero">3</div>
+				<div class="simbolo">&#9824</div>
+			</div>
+			<div class="palo" id="palo1">&#9824</div>
+			<div class="palo" id="palo2">&#9824</div>
+			<div class="palo" id="palo3">&#9824</div>
+		</div>
+
+		<div id="siete_treboles" class="carta">
+			<div id="numeracion7treboles" class="numeracion">
+				<div class="numero">7</div>
+				<div class="simbolo">&#9827</div>
+			</div>
+			<div id="numeracion7treboles_invertidos" class="numeracion">
+				<div class="numero">7</div>
+				<div class="simbolo">&#9827</div>
+			</div>
+			<div class="palo" id="palo1">&#9827</div>
+			<div class="palo" id="palo2">&#9827</div>
+			<div class="palo" id="palo3">&#9827</div>
+			<div class="palo" id="palo4">&#9827</div>
+			<div class="palo" id="palo5">&#9827</div>
+			<div class="palo" id="palo6">&#9827</div>
+			<div class="palo" id="palo7">&#9827</div>
+		</div>
+	</body>
+
+</html>
