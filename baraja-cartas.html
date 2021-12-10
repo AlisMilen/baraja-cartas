@@ -6,7 +6,6 @@
 body{
 	background-color: darkred;
 }
-
 .carta{
 	height: 300px;
 	width: 200px;
@@ -14,6 +13,12 @@ body{
 	border-radius: 5px;
 	border: solid;
 	border-color: black;
+	animation-delay: 1s;
+	animation-name: todo;
+	animation-duration: 4s;
+	top: 150px;
+	left: 160px;
+	animation-fill-mode: forwards;
 }
 .numero{
 	font-size: 25px;
@@ -33,10 +38,16 @@ body{
 {
 	transform: rotate(45deg);
 	position: absolute;
-	top: 180px;
-	left: 400px;
+	top: 230px;
+	left: 340px;
 	color: red;
 	z-index: 5;
+	animation-name: cinco;
+}
+@keyframes cinco
+{
+	0%	{left: 160px; top: 150px;transform: rotate(-45deg);}
+	100% {left: 340px; top: 230px;}
 }
 #numeracion5corazones_invertido
 {
@@ -86,6 +97,12 @@ body{
 	left:  160px;
 	top:  150px;
 	z-index: 1;
+	animation-name: dos;
+}
+@keyframes dos
+{
+	0%	{left: 160px; top: 150px; transform: rotate(145deg);}
+	100% {left: 160px; top: 150px;}
 }
 #numeracion2treboles_invertidos
 {
@@ -112,9 +129,15 @@ body{
 {
 	transform: rotate(0deg);
 	position: absolute;
-	left: 280px;
-	top: 120px;
+	left: 260px;
+	top: 150px;
 	z-index: 3;
+	animation-name: cuatro;
+}
+@keyframes cuatro
+{
+	0%	{left: 160px; top: 150px; transform: rotate(-45deg);}
+	100% {left: 260px; top: 150px;}
 }
 #numeracion4treboles_invertidos
 {
@@ -156,8 +179,14 @@ body{
 	transform: rotate(160deg);
 	position: absolute;
 	left: 210px;
-	top: 120px;
+	top: 140px;
 	z-index: 2;
+	animation-name: tres;
+}
+@keyframes tres
+{
+	0%	{left: 160px; top: 150px; transform: rotate(145deg);}
+	100% {left: 210px; top: 140px;}
 }
 #numeracion3picas_invertidos
 {
@@ -189,11 +218,17 @@ body{
 /*siete treboles*/
 #siete_treboles
 {
-	transform: rotate(30deg);
+	transform: rotate(25deg);
 	position: absolute;
-	left: 350px;
-	top: 140px;
+	left: 310px;
+	top: 190px;
 	z-index: 4;
+	animation-name: siete;
+}
+@keyframes siete
+{
+	0%	{left: 160px; top: 150px; transform: rotate(-45deg);}
+	100% {left: 310px; top: 190px;}
 }
 #numeracion7treboles_invertidos
 {
